@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>RGCVE Contact Form</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<meta name="description" content="" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/baselayer.css@latest/dist/baselayer-light.css" />
+		<style>
+			:root {
+				--border-width: 1px;
+				--border-radius: 0;
+				--color-primary: #445472;
+				--color-primary-intense: #2f3b52;
+				--color-primary-muted: #55637d;
+			}
+		</style>
+	</head>
+	<body>
+		<form class="container" name="visitors" method="POST" data-netlify="true">
+			<label
+				>Name
+				<input id="name" name="name" type="text" required />
+			</label>
+			<label
+				>Email
+				<input id="email" name="email" type="email" required />
+			</label>
+			<label
+				>Phone
+				<input id="phone" name="phone" type="text" />
+			</label>
+			<label>Would you like to talk to someone about RGC?</label>
+			<label><input type="radio" name="requests_contact" required checked id="yes" value="Yes" /> Yes</label>
+			<label><input type="radio" name="requests_contact" required id="no" value="No" /> No</label>
+			<label><input type="radio" name="requests_contact" required id="maybe" value="Maybe" /> Maybe</label>
+			<br />
+			<button>Submit</button>
+		</form>
+	</body>
+</html>
