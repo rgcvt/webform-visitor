@@ -23,6 +23,18 @@
 	</head>
 	<body class="container">
 		<a href="visitors.html">Visitors</a>
+		<iframe src="https://rgcvtforms.netlify.app/visitors" frameborder="0" width="100%" data-rgcform="true"></iframe>
+		<script>
+			const iframe = document.querySelector('[data-rgcform]');
+			window.addEventListener(
+				'message',
+				function (e) {
+					iframe.style.height = e.data.height + 30 + 'px';
+				},
+				false
+			);
+		</script>
+
 		<script type="module" src="assets/script.js"></script>
 	</body>
 </html>
