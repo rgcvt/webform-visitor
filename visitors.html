@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<!-- Base meta tags -->
 		<meta charset="UTF-8" />
-		<title>RGCVE Contact Form</title>
-		<meta name="viewport" content="width=device-width,initial-scale=1" />
-		<meta name="description" content="" />
+		<title>RGCVT Forms - Visitors</title>
+		<meta name="language" content="english" />
+		<meta name="description" content="{{ description }}" />
+
+		<!-- Reassure the browser that we are mobile-friendly -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
+		<meta name="HandheldFriendly" content="True" />
+		<meta name="view-transition" content="same-origin" />
+
+		<!-- Favicons -->
+		<link rel="icon" href="assets/favicon.ico" />
+		<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" sizes="any" />
+		<link rel="apple-touch-icon" href="assets/favicon-apple.png" />
+
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/baselayer.css@latest/dist/baselayer-light.css" />
-		<style>
-			:root {
-				--border-width: 1px;
-				--border-radius: 0;
-				--color-primary: #445472;
-				--color-primary-intense: #2f3b52;
-				--color-primary-muted: #55637d;
-			}
-		</style>
+		<link rel="stylesheet" href="assets/style.css" />
 	</head>
 	<body>
 		<form class="container" name="visitors" method="POST" data-netlify="true">
 			<label
 				>Name
-				<input id="name" name="name" type="text" required />
+				<input id="name" name="name" type="text" placeholder="John Smith" autocomplete="name" required />
 			</label>
 			<label
 				>Email
-				<input id="email" name="email" type="email" required />
+				<input id="email" name="email" type="email" placeholder="johnsmith@gmail.com" autocomplete="email" required />
 			</label>
 			<label
 				>Phone
-				<input id="phone" name="phone" type="text" />
+				<input id="phone" name="phone" placeholder="(123) 456-7890" autocomplete="tel" type="text" />
 			</label>
 			<label>Would you like to talk to someone about RGC?</label>
 			<label><input type="radio" name="requests_contact" required checked id="yes" value="Yes" /> Yes</label>

@@ -1,0 +1,10 @@
+:root {
+	--border-width: 1px;
+	--border-radius: 0;
+	--color-primary: #445472;
+	--color-primary-intense: #2f3b52;
+	--color-primary-muted: #55637d;
+}
+body {
+	background-color: transparent;
+}
