@@ -1,0 +1,14 @@
+{
+	"name": "mini-devex",
+	"version": "1.0.0",
+	"description": "A minimal config for easy compilation to native web technologies.",
+	"main": "index.html",
+	"type": "module",
+	"scripts": {
+		"watch:sync": "browser-sync start --server --files './**/*', '!./node_modules/*', '!./.git/*'",
+		"dev": "npm run watch:sync"
+	},
+	"devDependencies": {
+		"browser-sync": "latest"
+	}
+}

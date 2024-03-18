@@ -18,30 +18,75 @@
 		<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" sizes="any" />
 		<link rel="apple-touch-icon" href="assets/favicon-apple.png" />
 
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/baselayer.css@latest/dist/baselayer-light.css" />
-		<link rel="stylesheet" href="assets/style.css" />
+		<link rel="stylesheet" href="assets/css/style.css" />
 	</head>
 	<body>
-		<form class="container" name="visitors" method="POST" netlify>
-			<label
-				>Name*
-				<input id="name" name="name" type="text" placeholder="John Smith" autocomplete="name" required />
-			</label>
-			<label
-				>Email*
-				<input id="email" name="email" type="email" placeholder="johnsmith@gmail.com" autocomplete="email" required />
-			</label>
-			<label
-				>Phone
-				<input id="phone" name="phone" placeholder="(123) 456-7890" autocomplete="tel" type="text" />
-			</label>
-			<label>Would you like to talk to someone about RGC?*</label>
-			<label><input type="radio" name="requests_contact" required checked id="yes" value="Yes" /> Yes</label>
-			<label><input type="radio" name="requests_contact" required id="no" value="No" /> No</label>
-			<label><input type="radio" name="requests_contact" required id="maybe" value="Maybe" /> Maybe</label>
-			<br />
-			<button>Submit</button>
-		</form>
-		<script type="module" src="assets/script.js"></script>
+		<div class="visitor-container">
+			<div class="intro">
+				<svg
+					version="1.1"
+					xmlns="http://www.w3.org/2000/svg"
+					xmlns:xlink="http://www.w3.org/1999/xlink"
+					x="0px"
+					y="0px"
+					viewBox="0 0 475 375"
+					enable-background="new 0 0 475 375"
+					xml:space="preserve"
+				>
+					<circle
+						fill="var(--color-primary)"
+						stroke="#FFFFFF"
+						stroke-width="8"
+						stroke-miterlimit="10"
+						cx="187.2"
+						cy="187.1"
+						r="179.6"
+					/>
+					<text transform="matrix(1 0 0 1 111.0519 90.4466)" fill="white" font-size="72px">we’re</text>
+					<text transform="matrix(1 0 0 1 153.1374 154.0965)" fill="white" font-size="72px" font-weight="800">
+						glad
+					</text>
+					<text transform="matrix(1 0 0 1 33.7907 232.8074)" fill="white" font-size="72px">you’re</text>
+					<text transform="matrix(1 0 0 1 79.9049 296.14)" fill="white" font-weight="800" font-size="72">here!</text>
+					<circle
+						stroke="white"
+						fill="var(--color-dark)"
+						stroke-width="8"
+						stroke-miterlimit="10"
+						cx="367.8"
+						cy="269"
+						r="98.5"
+					/>
+					<text transform="matrix(1 0 0 1 312.5821 228.4952)">
+						<tspan x="0" y="0" fill="white" font-size="32px">will you</tspan>
+						<tspan x="-26.2" y="34.2" fill="white" font-size="32px">share some</tspan>
+						<tspan x="-29.4" y="68.5" fill="white" font-size="32px">information</tspan>
+						<tspan x="-3.4" y="102.7" fill="white" font-size="32px">with us?</tspan>
+					</text>
+				</svg>
+			</div>
+			<form name="visitors" method="POST" netlify>
+				<label>
+					<input id="name" name="name" type="text" placeholder="John Smith" autocomplete="name" required />
+					<span class="label-small">Name*</span>
+				</label>
+				<label>
+					<input id="email" name="email" type="email" placeholder="johnsmith@gmail.com" autocomplete="email" required />
+					<span class="label-small">Email*</span>
+				</label>
+				<label>
+					<input id="phone" name="phone" placeholder="(123) 456-7890" autocomplete="tel" type="text" />
+					<span class="label-small">Phone*</span>
+				</label>
+				<br />
+				<p>Would you like to talk to someone about RGC?*</p>
+				<label><input type="radio" name="requests_contact" required checked id="yes" value="Yes" /> Yes</label>
+				<label><input type="radio" name="requests_contact" required id="no" value="No" /> No</label>
+				<label><input type="radio" name="requests_contact" required id="maybe" value="Maybe" /> Maybe</label>
+				<br />
+				<button>Contact Us</button>
+			</form>
+		</div>
+		<script type="module" src="assets/js/script.js"></script>
 	</body>
 </html>
